@@ -61,7 +61,7 @@ Each created package contains a constant variable that refers to the emplacement
 
 ```python
 import mysuperpackage
-print(mysuperpackage.monsuperpackage_RESOURCES_DIR)
+print(mysuperpackage.RESOURCES_DIR)
 ```
 
 # Requirements
