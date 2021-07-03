@@ -8,6 +8,11 @@ import logging
 
 def main():
 
+    LAUNCHER_DIR = os.path.join(os.path.dirname(__file__))
+    PYCKAGE_RESOURCES_DIR = os.path.join(os.path.abspath(os.path.join(LAUNCHER_DIR,os.pardir)),"resources")
+
+    parser = argparse.ArgumentParser()
+
     parser = argparse.ArgumentParser()
 
     parser.add_argument('--verbosity',"-v",
@@ -29,12 +34,11 @@ def main():
                         format='%(asctime)s %(message)s',
                         stream=sys.stdout)
 
-
     show_progress_bar = False
     if args.progress_bar:
         show_progress_bar = True
 
-    [NAME].[APPMODULE1].[APPFUNCTION1](loglevel = verboselevel, progress_bar = show_progress_bar)
+    [NAME].[APPMODULE1].[APPFUNCTION1](loglevel = verboselevel, progress_bar = show_progress_bar, resources = PYCKAGE_RESOURCES_DIR)
 
 if __name__ == "__main__":
     main()

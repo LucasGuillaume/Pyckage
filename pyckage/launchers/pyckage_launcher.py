@@ -6,7 +6,13 @@ import os
 import sys
 import logging
 
+import os
+
+
 def main():
+
+    LAUNCHER_DIR = os.path.join(os.path.dirname(__file__))
+    PYCKAGE_RESOURCES_DIR = os.path.join(os.path.abspath(os.path.join(LAUNCHER_DIR,os.pardir)),"resources")
 
     parser = argparse.ArgumentParser()
 
@@ -34,7 +40,7 @@ def main():
     if args.progress_bar:
         show_progress_bar = True
 
-    pyckage.only_module.transform(loglevel = verboselevel, progress_bar = show_progress_bar)
+    pyckage.only_module.transform(loglevel = verboselevel, progress_bar = show_progress_bar, resources = PYCKAGE_RESOURCES_DIR)
 
 if __name__ == "__main__":
     main()
