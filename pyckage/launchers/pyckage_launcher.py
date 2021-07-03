@@ -71,11 +71,12 @@ def main():
                             default="NONE",
                             type=str)
 
-    parser.add_argument('--requirements',"-r",
-                            help="pip requirements, as a python list between quotes. Exemple : \"[python>=3.7,tqdm]\". Default = '[python>=3.7]'",
-                            required=False,
-                            type=str,
-                            default="[python>=3.7]")
+    # Trop chiant à gérer pour trop peu d'intérêt
+    # parser.add_argument('--requirements',"-r",
+    #                         help="pip requirements, as a python list between quotes. Exemple : \"[python>=3.7,tqdm]\". Default = '[python>=3.7]'",
+    #                         required=False,
+    #                         type=str,
+    #                         default="[python>=3.7]")
 
     args = parser.parse_args()
 

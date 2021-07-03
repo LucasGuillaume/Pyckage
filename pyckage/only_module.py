@@ -38,7 +38,6 @@ def transform(loglevel, resources, args):
         "[DESCRIPTION]":args["description"],
         "[LONG_DESCRIPTION]":args["long_description"],
         "[URL]":args["URL"],
-        "[REQUIRES]":args["requirements"]
     }
 
     logging.debug("[DEBUG] Corresp dict = {}".format(corresp_dict))

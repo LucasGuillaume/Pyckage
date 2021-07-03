@@ -13,7 +13,7 @@ setup(
     author_email="[EMAIL]",
     packages=find_packages("."),
     url="[URL]",
-    install_requires='[REQUIRES]',
+    install_requires=[],
     package_data={'[NAME]': ['resources/*']},
     entry_points={'console_scripts': [
         "[NAME] = [NAME].launchers.[NAME]_launcher:main",
