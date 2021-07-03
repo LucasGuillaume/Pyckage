@@ -14,13 +14,19 @@ def transform(loglevel, resources, args):
     dst = os.path.join(os.getcwd(),args["name"])
     shutil.copytree(src, dst)
 
-    os.chdir(dst)
+    os.chdir(dst) # In the newly created repo
+
     src = "NAME"
     dst = args["name"]
-    os.rename(src, dst)
+    os.rename(src, dst) # Renaming the subdirectory where all submodules are
 
-    src = os.path.join("launchers","NAME_launcher.py")
-    dst = os.path.join("launchers","{}_launcher.py".format(args["name"]))
+    tojoin = [os.getcwd(),args["name"],"launchers","NAME_launcher.py"]
+    src = os.path.join(*tojoin)
+    tojoin = [os.getcwd(),args["name"],"launchers","{}_launcher.py".format(args["name"])]
+    dst = os.path.join(*tojoin)
+
+    logging.debug("[DEBUG] Src = {}, dst = {}".format(src,dst))
+
     os.rename(src, dst)
 
     corresp_dict = {
@@ -30,15 +36,23 @@ def transform(loglevel, resources, args):
         "[AUTHOR]":args["author"],
         "[EMAIL]": args["email"],
         "[DESCRIPTION]":args["description"],
-        "[LONG_DESCRIPTION]":args["long_decription"],
-        "[URL]":args["url"],
+        "[LONG_DESCRIPTION]":args["long_description"],
+        "[URL]":args["URL"],
         "[REQUIRES]":args["requirements"]
     }
 
     logging.debug("[DEBUG] Corresp dict = {}".format(corresp_dict))
 
-    for filename in glob.iglob('**'):
-        filin = open(filename,"r").read()
+    for filename in glob.iglob('**',recursive=True):
+        if os.path.isfile(filename):
+            logging.debug('[DEBUG] Reformating {}'.format(filename))
+
+            filin = open(filename,"r").read()
+            for key in corresp_dict:
+                filin = filin.replace(key,str(corresp_dict[key]))
+            filout = open(filename,"w")
+            filout.write(filin)
+            filout.close()
 
 
 

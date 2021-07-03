@@ -32,6 +32,7 @@ def main():
     parser.add_argument('--version',
                             help='Initial version (DEFAULT: 0.1)',
                             required=False,
+                            default="0.1",
                             type=str)
 
     parser.add_argument('--year',"-y",
@@ -43,12 +44,12 @@ def main():
     parser.add_argument('--author',"-a",
                             help='Author name',
                             required=False,
-                            default="None",
+                            default="NONE",
                             type=str)
 
     parser.add_argument('--email',"-e",
                             help='Your email address',
-                            default="None",
+                            default="NONE",
                             required=False,
                             type=str)
 
@@ -67,7 +68,7 @@ def main():
     parser.add_argument('--URL',"-u",
                             help="Project's URL",
                             required=False,
-                            default="None",
+                            default="NONE",
                             type=str)
 
     parser.add_argument('--requirements',"-r",

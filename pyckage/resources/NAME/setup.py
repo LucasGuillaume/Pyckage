@@ -8,7 +8,7 @@ setup(
     name='[NAME]',
     version='[VERSION]',
     description="[DESCRIPTION]",
-    long_description="[LONG DESCRIPTION]",
+    long_description="[LONG_DESCRIPTION]",
     author='[AUTHOR]',
     author_email="[EMAIL]",
     packages=find_packages("."),
