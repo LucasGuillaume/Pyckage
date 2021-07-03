@@ -10,7 +10,7 @@ def transform(loglevel, resources, args):
     logging.debug('[DEBUG] Parsed arguments = {}'.format(args))
     logging.debug('[DEBUG] loglevel : {}, resources located in {}'.format(loglevel,resources))
 
-    src = os.path.join(resources,"[NAME]")
+    src = os.path.join(resources,"NAME")
     dst = os.path.join(os.getcwd(),args["name"])
     shutil.copytree(src, dst)
 
