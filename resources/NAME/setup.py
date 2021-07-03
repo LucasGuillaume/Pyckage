@@ -10,7 +10,7 @@ setup(
     description="[DESCRIPTION]",
     long_description="[LONG DESCRIPTION]",
     author='[AUTHOR]',
-    author_email="[AUTHOR_EMAIL]",
+    author_email="[EMAIL]",
     packages=find_packages("."),
     url="[URL]",
     python_requires='[REQUIRES]',

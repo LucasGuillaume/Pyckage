@@ -26,7 +26,7 @@ def main():
                             choices=["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"])
 
     parser.add_argument('name',
-                            help='Package name',
+                            help='Package name. Must be a valid python variable name',
                             type=str)
 
     parser.add_argument('--version',
@@ -72,7 +72,7 @@ def main():
 
     parser.add_argument('--requirements',"-r",
                             help="pip requirements, as a python list between quotes. Exemple : \"[python>=3.7,tqdm]\". Default = '[python>=3.7]'",
-                            required=True,
+                            required=False,
                             type=str,
                             default="[python>=3.7]")
 
@@ -85,11 +85,7 @@ def main():
                         stream=sys.stdout)
 
 
-    show_progress_bar = False
-    if args.progress_bar:
-        show_progress_bar = True
-
-    pyckage.only_module.transform(loglevel = verboselevel, progress_bar = show_progress_bar, resources = PYCKAGE_RESOURCES_DIR)
+    pyckage.only_module.transform(loglevel = verboselevel, resources = PYCKAGE_RESOURCES_DIR, args = vars(args))
 
 if __name__ == "__main__":
     main()

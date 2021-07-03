@@ -12,7 +12,7 @@ Status : Development
 
 # Requirements
 
-[PP_REQUIRES]
+[REQUIRES]
 
 # Installation
 
@@ -23,15 +23,16 @@ user@computer:$ pip install -e ./[NAME]
 
 # Usage
 
+Complet here the outcome of the command :
+
 ```console
 user@computer:$ [NAME] -h
-user@computer:$ [HELP]
 ```
 
 # Credits
 
 [AUTHOR] - [YEAR]
-[AUTHOR_EMAIL]
+[EMAIL]
 
 # License
 

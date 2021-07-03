@@ -38,7 +38,7 @@ def main():
     if args.progress_bar:
         show_progress_bar = True
 
-    [NAME].[APPMODULE1].[APPFUNCTION1](loglevel = verboselevel, progress_bar = show_progress_bar, resources = PYCKAGE_RESOURCES_DIR)
+    [NAME].[APPMODULE1].[APPFUNCTION1](loglevel = verboselevel, progress_bar = show_progress_bar, resources = PYCKAGE_RESOURCES_DIR, args=vars(args))
 
 if __name__ == "__main__":
     main()
