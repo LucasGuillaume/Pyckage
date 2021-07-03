@@ -1,1 +1,1 @@
-import [NAME].[APPMODULE1]
+import [NAME].app_module1
