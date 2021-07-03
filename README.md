@@ -15,10 +15,11 @@ user@computer:$ pip install -e ./Pyckage
 
 # Usage
 
-0) Installer pyckage
-2) Créer un nouveau package dans le répertoire courant (exemple: "pyckage monsuperpackage")
-3) Faire "pip install -e ./monsuperpackage"
-4) On peut modifier directement monsuperpackage, et l'utiliser dans la ligne de commande 
+0) Install pyckage (see section above)
+2) Create a new package in the current directory (example: "pyckage mysuperpackage", see section below for more options)
+3) Once monsuperpackage has been created in the current directory, do "pip install -e ./mysuperpackage"
+4) You can modify mysuperpackage directly, and use it in the command line. The modifications will be applied live each time we call mysuperpackage in the command line.
+
 
 Détails : 
 
@@ -54,13 +55,13 @@ optional arguments:
 
 ```
 
-# Astuce
+# Tip for the resources dir
 
-Chaque package crée contient un répertoire "resources". On peut y accéder en faisant
+Each created package contains a constant variable that refers to the emplacement of its resources: 
 
 ```python
-import monsuperpackage
-print(monsuperpackage.monsuperpackage_RESOURCES_DIR)
+import mysuperpackage
+print(mysuperpackage.monsuperpackage_RESOURCES_DIR)
 ```
 
 # Requirements
