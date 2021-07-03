@@ -1,0 +1,17 @@
+NAME
+VERSION (=0.1)
+YEAR
+AUTHOR
+AUTHOR_EMAIL
+DESCRIPTION
+LONG_DESCRIPTION
+URL
+REQUIRES --> [python>=3.7] PP_REQUIRES --> La même en pretty print pour la page de garde
+INSTALLATION (git clone pip install -e ...) 
+LICENSE (seulement MIT)
+
+RESOURCES
+ENTRY (--> "[NAME] = [NAME].launchers.[NAME]_launcher:main
+
+APPMODULE1 --> Module avec la première fonction
+APPFUNCTION1 --> Fonction du module appelée par le main
