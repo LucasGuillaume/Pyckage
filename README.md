@@ -17,7 +17,7 @@ user@computer:$ pip install -e ./Pyckage
 
 0) Install pyckage (see section above)
 2) Create a new package in the current directory (example: "pyckage mysuperpackage", see section below for more options)
-3) Once monsuperpackage has been created in the current directory, do "pip install -e ./mysuperpackage"
+3) Once mysuperpackage has been created in the current directory, do "pip install -e ./mysuperpackage"
 4) You can modify mysuperpackage directly, and use it in the command line. The modifications will be applied live each time we call mysuperpackage in the command line.
 
 
