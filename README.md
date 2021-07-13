@@ -31,7 +31,7 @@ positional arguments:
 optional arguments:
   -h, --help            show this help message and exit
   --verbosity {DEBUG,INFO,WARNING,ERROR,CRITICAL}, -v {DEBUG,INFO,WARNING,ERROR,CRITICAL}
-                        Choose your verbosity. Default: INFO
+                        Choose your verbosity. Default: DEBUG
   --version VERSION     Initial version (DEFAULT: 0.1)
   --year YEAR, -y YEAR  Choose your verbosity. Default: current year
   --author AUTHOR, -a AUTHOR
