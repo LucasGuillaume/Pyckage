@@ -15,12 +15,6 @@ user@computer:$ pip install -e ./Pyckage
 
 # Usage
 
-0) Install pyckage (see section above)
-2) Create a new package in the current directory (example: "pyckage mysuperpackage", see section below for more options)
-3) Once mysuperpackage has been created in the current directory, do "pip install -e ./mysuperpackage"
-4) You can modify mysuperpackage directly, and use it in the command line. The modifications will be applied live each time we call mysuperpackage in the command line.
-
-
 Détails : 
 
 ```console
@@ -53,6 +47,25 @@ optional arguments:
                         pip requirements, as a python list between quotes. Exemple : "[python>=3.7,tqdm]"
 
 
+```
+
+# Example
+
+```console
+user@computer: pyckage my_super_package
+user@computer: pip install -e ./my_super_package
+Obtaining file:///home/my_super_package
+Installing collected packages: my-super-package
+  Running setup.py develop for my-super-package
+Successfully installed my-super-package
+user@computer: my_super_package -h
+usage: my_super_package [-h] [--verbosity {DEBUG,INFO,WARNING,ERROR,CRITICAL}] [--progress_bar]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --verbosity {DEBUG,INFO,WARNING,ERROR,CRITICAL}, -v {DEBUG,INFO,WARNING,ERROR,CRITICAL}
+                        Choose your verbosity. Default: INFO
+  --progress_bar, -p    Displays a progress bar
 ```
 
 # Tip for the resources dir
