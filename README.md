@@ -80,8 +80,8 @@ optional arguments:
 Each created package contains a constant variable that refers to the emplacement of its resources: 
 
 ```python
-import mysuperpackage
-print(mysuperpackage.RESOURCES_DIR)
+>>> import mysuperpackage
+>>> print(mysuperpackage.RESOURCES_DIR)
 ```
 
 ### Build, modify your package
