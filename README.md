@@ -51,6 +51,8 @@ optional arguments:
 
 # Example
 
+### Create and install a package
+
 ```console
 user@computer:$ pyckage my_super_package
 user@computer:$ pip install -e ./my_super_package
@@ -58,6 +60,11 @@ Obtaining file:///home/my_super_package
 Installing collected packages: my-super-package
   Running setup.py develop for my-super-package
 Successfully installed my-super-package
+```
+
+### Use the package from command-line
+
+```
 user@computer$: my_super_package -h
 usage: my_super_package [-h] [--verbosity {DEBUG,INFO,WARNING,ERROR,CRITICAL}] [--progress_bar]
 
@@ -66,38 +73,9 @@ optional arguments:
   --verbosity {DEBUG,INFO,WARNING,ERROR,CRITICAL}, -v {DEBUG,INFO,WARNING,ERROR,CRITICAL}
                         Choose your verbosity. Default: INFO
   --progress_bar, -p    Displays a progress bar
-user@computer:$ tree my_super_package/
-my_super_package/
-├── LICENSE.txt
-├── METADATA.in
-├── my_super_package
-│   ├── app_module1.py
-│   ├── __init__.py
-│   ├── launchers
-│   │   ├── __init__.py
-│   │   ├── my_super_package_launcher.py
-│   │   └── __pycache__
-│   │       ├── __init__.cpython-38.pyc
-│   │       └── my_super_package_launcher.cpython-38.pyc
-│   ├── __pycache__
-│   │   ├── app_module1.cpython-38.pyc
-│   │   └── __init__.cpython-38.pyc
-│   └── resources
-│       └── EMPTY
-├── my_super_package.egg-info
-│   ├── dependency_links.txt
-│   ├── entry_points.txt
-│   ├── PKG-INFO
-│   ├── SOURCES.txt
-│   └── top_level.txt
-├── README.md
-└── setup.py
-
-6 directories, 18 files
-
 ```
 
-# Tip for the resources dir
+### Import your package from python and locate its resources
 
 Each created package contains a constant variable that refers to the emplacement of its resources: 
 
@@ -105,6 +83,32 @@ Each created package contains a constant variable that refers to the emplacement
 import mysuperpackage
 print(mysuperpackage.RESOURCES_DIR)
 ```
+
+### Build, modify your package
+
+``` console
+user@computer:$ tree my_super_package/
+my_super_package/
+my_super_package/
+├── LICENSE.txt # Change with whatever license you want
+├── METADATA.in
+├── my_super_package # Your independent modules goes in this subdirectory
+│   ├── app_module1.py # Replace with your own module name
+    # Add your different modules here
+│   ├── __init__.py # Import all your modules here
+│   ├── launchers # Your CLI programs
+│   │   ├── __init__.py # Don't forget to add additional launcher programs if there is any
+│   │   └── my_super_package_launcher.py # Parses arguments 
+            # By default, launches app_module1.appfunction_of_module1(). Change with whatever you want
+│   └── resources # Put your resources here (Images, HTML, etc)
+│       └── EMPTY
+├── README.md # Markdown README
+└── setup.py # You can add new launchers if you specify them from here
+
+6 directories, 18 files
+```
+
+
 
 # Requirements
 
