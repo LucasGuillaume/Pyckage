@@ -52,13 +52,13 @@ optional arguments:
 # Example
 
 ```console
-user@computer: pyckage my_super_package
-user@computer: pip install -e ./my_super_package
+user@computer:$ pyckage my_super_package
+user@computer:$ pip install -e ./my_super_package
 Obtaining file:///home/my_super_package
 Installing collected packages: my-super-package
   Running setup.py develop for my-super-package
 Successfully installed my-super-package
-user@computer: my_super_package -h
+user@computer$: my_super_package -h
 usage: my_super_package [-h] [--verbosity {DEBUG,INFO,WARNING,ERROR,CRITICAL}] [--progress_bar]
 
 optional arguments:
@@ -66,6 +66,35 @@ optional arguments:
   --verbosity {DEBUG,INFO,WARNING,ERROR,CRITICAL}, -v {DEBUG,INFO,WARNING,ERROR,CRITICAL}
                         Choose your verbosity. Default: INFO
   --progress_bar, -p    Displays a progress bar
+user@computer:$ tree my_super_package/
+my_super_package/
+├── LICENSE.txt
+├── METADATA.in
+├── my_super_package
+│   ├── app_module1.py
+│   ├── __init__.py
+│   ├── launchers
+│   │   ├── __init__.py
+│   │   ├── my_super_package_launcher.py
+│   │   └── __pycache__
+│   │       ├── __init__.cpython-38.pyc
+│   │       └── my_super_package_launcher.cpython-38.pyc
+│   ├── __pycache__
+│   │   ├── app_module1.cpython-38.pyc
+│   │   └── __init__.cpython-38.pyc
+│   └── resources
+│       └── EMPTY
+├── my_super_package.egg-info
+│   ├── dependency_links.txt
+│   ├── entry_points.txt
+│   ├── PKG-INFO
+│   ├── SOURCES.txt
+│   └── top_level.txt
+├── README.md
+└── setup.py
+
+6 directories, 18 files
+
 ```
 
 # Tip for the resources dir
