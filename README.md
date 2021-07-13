@@ -89,7 +89,6 @@ print(mysuperpackage.RESOURCES_DIR)
 ``` console
 user@computer:$ tree my_super_package/
 my_super_package/
-my_super_package/
 ├── LICENSE.txt # Change with whatever license you want
 ├── METADATA.in
 ├── my_super_package # Your independent modules goes in this subdirectory
