@@ -108,11 +108,30 @@ my_super_package/
 6 directories, 18 files
 ```
 
+### Upload your package on PyPI
 
+#### This requires twine (usually already installed)
+
+```console
+user@computer:$ pip install --update twine
+```
+
+#### Then you can make a distribution, and upload it on test PyPI:
+
+```console
+user@computer:$ cd my_super_package
+user@computer:$ python setup.py sdist bdist_wheel
+user@computer$: twine upload -r testpypi dist/* 
+username: ...
+password:
+...
+```
+
+See [Here](https://twine.readthedocs.io/en/latest/) to upload on the real PyPI once you're ready
 
 # Requirements
 
-Pure python.
+Python >=3.7
 
 # Credits
 
