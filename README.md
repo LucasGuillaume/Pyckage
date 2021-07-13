@@ -120,7 +120,7 @@ user@computer:$ pip install --update twine
 ```console
 user@computer:$ cd my_super_package
 user@computer:$ python setup.py sdist bdist_wheel
-user@computer$: twine upload -r testpypi dist/* 
+user@computer:$ twine upload -r testpypi dist/* 
 username: ...
 password:
 ...
