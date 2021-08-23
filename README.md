@@ -1,6 +1,6 @@
 # Pyckage
 
-Quick boilerplate for a new python package
+Quick boilerplate for a new python package. This is can be seen as a quick, leightweight, one-liner [poetry](https://python-poetry.org/), perhaps more suited for prototypes and small personal projects
 
 # Description
 
