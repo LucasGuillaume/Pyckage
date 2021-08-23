@@ -75,7 +75,7 @@ optional arguments:
   --progress_bar, -p    Displays a progress bar
 ```
 
-### Import your package from python and locate its resources
+### Import your newly created package from python and locate its resources
 
 Each created package contains a constant variable that refers to the emplacement of its resources: 
 
@@ -84,7 +84,7 @@ Each created package contains a constant variable that refers to the emplacement
 >>> print(mysuperpackage.RESOURCES_DIR)
 ```
 
-### Build, modify your package
+### Build, modify your newly created package
 
 ``` console
 user@computer:$ tree my_super_package/
@@ -107,9 +107,9 @@ my_super_package/
 6 directories, 18 files
 ```
 
-### Upload your package on PyPI
+### Upload your newly created package on PyPI
 
-#### This requires twine (usually already installed)
+#### This requires twine (usually, it is already distributed with python)
 
 ```console
 user@computer:$ pip install --update twine
